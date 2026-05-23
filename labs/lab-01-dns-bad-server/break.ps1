@@ -19,15 +19,24 @@ if (Test-Path $backupFile) {
     exit 1
 }
 
-# --- Detect active physical adapter (excludes WSL, Hyper-V, VMware, etc.) ---
-$virtualPattern = 'Hyper-V|WSL|VirtualBox|VMware|Loopback|isatap|Teredo|6to4|Pseudo'
+# --- Detect active physical adapter ---
+# Filter design:
+#   - Match only MediaType '802.3' (Ethernet) or 'Native 802.11' (Wi-Fi). This is more
+#     reliable than PhysicalMediaType, which reports 'Unspecified' for both virtual NICs
+#     AND for real adapters inside Hyper-V VMs (synthetic VMBUS adapters).
+#   - Exclude by name/description pattern for software-only interfaces (WSL NAT switch,
+#     VirtualBox host-only, VMware VMnet, loopback, tunnel adapters).
+#   - 'Hyper-V' is intentionally absent from the pattern: inside a Hyper-V VM the guest
+#     NIC is named 'Microsoft Hyper-V Network Adapter' and IS the real adapter we want.
+$virtualPattern = 'WSL|VirtualBox|VMware|Loopback|isatap|Teredo|6to4|Pseudo'
+$physicalMediaTypes = '802.3', 'Native 802.11'
 
 $adapter = Get-NetAdapter |
     Where-Object {
         $_.Status -eq 'Up' -and
         $_.InterfaceDescription -notmatch $virtualPattern -and
         $_.Name -notmatch $virtualPattern -and
-        $_.PhysicalMediaType -ne 'Unspecified'
+        $_.MediaType -in $physicalMediaTypes
     } | Select-Object -First 1
 
 if (-not $adapter) {

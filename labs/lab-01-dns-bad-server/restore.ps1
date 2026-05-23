@@ -1,5 +1,7 @@
 # restore.ps1 — Lab 01: DNS Bad Server
 # Restores the original DNS configuration saved by break.ps1.
+# Works on any hypervisor (Hyper-V, VMware, VirtualBox) — no adapter detection here,
+# all state is read from original-dns-config.json written by break.ps1.
 #
 # Requires administrator privileges.
 

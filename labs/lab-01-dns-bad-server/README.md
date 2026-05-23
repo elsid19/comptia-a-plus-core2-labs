@@ -41,6 +41,22 @@ Read the full ticket in [`case-file.md`](case-file.md).
 
 ---
 
+## Compatibility
+
+| Environment | Supported |
+|-------------|-----------|
+| Windows host (Wi-Fi or Ethernet) | ✅ |
+| Hyper-V VM (Microsoft Hyper-V Network Adapter) | ✅ |
+| VMware VM (VMware VMXNET / E1000) | ✅ |
+| VirtualBox VM (VirtualBox network adapter) | ✅ |
+
+The adapter detection filter uses `MediaType` (`802.3` / `Native 802.11`) rather than
+`PhysicalMediaType`. Hyper-V synthetic adapters report `PhysicalMediaType` as `Unspecified`
+even though they are the real guest NIC — the `MediaType` property correctly identifies
+them as Ethernet (`802.3`) and they pass the filter.
+
+---
+
 ## How to run this lab
 
 1. Revert your VM to the **"Clean"** snapshot.
