@@ -1,0 +1,28 @@
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# PowerShell
+*.ps1xml
+*.psm1
+*.psd1
+profile.ps1
+
+# Lab runtime artifacts (never commit saved DNS/config state)
+original-dns-config.json
+original-*.json
+*.bak
+
+# VS Code
+.vscode/
+
+# Output / logs
+*.log
+*.csv
+
+# Credentials / secrets
+*.key
+*.pem
+*.pfx
+secrets.*
