@@ -71,6 +71,21 @@ them as Ethernet (`802.3`) and they pass the filter.
 
 ---
 
+## How to document your troubleshooting
+
+Working a ticket without documenting it is a missed learning opportunity. After you
+resolve this lab, write up what you found using the repo's ticket template — it
+builds the habit of clear technical communication, which matters as much as technical
+skill in a real IT role.
+
+- **Blank template:** [`../../templates/ticket-template.md`](../../templates/ticket-template.md)
+- **Worked example for this lab:** [`example-ticket.md`](example-ticket.md)
+
+The example shows exactly what evidence to capture, how to phrase a diagnosis
+narrative, and why the resolution chose DHCP-automatic over a static alternative.
+
+---
+
 ## Solution walkthrough
 
 <details>

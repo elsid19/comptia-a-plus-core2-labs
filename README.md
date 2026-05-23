@@ -74,13 +74,16 @@ comptia-a-plus-core2-labs/
 ├── LICENSE
 ├── objectives/
 │   └── core2-blueprint.md     ← full exam domain breakdown
+├── templates/
+│   └── ticket-template.md     ← blank ticket write-up template
 ├── labs/
 │   ├── _template/             ← copy this when building new labs
 │   └── lab-XX-name/
 │       ├── README.md          ← lab guide + spoiler walkthrough
 │       ├── break.ps1          ← injects the fault
 │       ├── restore.ps1        ← resets the system
-│       └── case-file.md       ← the help desk ticket
+│       ├── case-file.md       ← the help desk ticket
+│       └── example-ticket.md  ← worked ticket write-up (built labs only)
 ├── questions/                 ← practice questions (coming soon)
 └── flashcards/                ← term/definition sets (coming soon)
 ```
