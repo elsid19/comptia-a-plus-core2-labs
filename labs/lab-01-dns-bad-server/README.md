@@ -18,8 +18,10 @@ Read the full ticket in [`case-file.md`](case-file.md).
 
 | Code | Description |
 |------|-------------|
-| 1.2  | Use the appropriate Microsoft command-line tool |
-| 3.1  | Given a scenario, troubleshoot common Windows OS problems |
+| 1.7  | Configure Microsoft Windows networking features on a client/desktop — specifically DNS settings on a network adapter |
+| 3.1  | Given a scenario, troubleshoot common Windows OS issues — specifically the "Unable to access the network" symptom |
+
+> Objective references verified against CompTIA A+ 220-1202 Exam Objectives v4.0.
 
 ---
 

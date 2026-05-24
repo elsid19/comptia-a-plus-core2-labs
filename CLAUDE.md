@@ -92,6 +92,22 @@ $adapter = Get-NetAdapter | Where-Object {
 
 ---
 
+## Objective Mapping Rules
+
+When mapping labs to exam objectives, use exact sub-objective numbers from the verified v4.0 blueprint (see objectives/core2-blueprint.md). The official CompTIA PDF supersedes any training-data version of the objectives. If a number from training data conflicts with the blueprint file, the blueprint file wins.
+
+Confirmed lab mappings:
+- Lab 01 (DNS Bad Server) → 1.7 (Windows networking features, DNS specifically) + 3.1 (Windows OS issues, "Unable to access the network" symptom)
+- Lab 02 (Print Spooler Stopped) → 1.4 (Windows OS features and tools, services management) + 3.1 (Windows OS issues, "services not starting" symptom)
+
+---
+
+## Terminal Output Verification
+
+When verifying file contents that contain long lines, do not rely on terminal display (Get-Content, type, cat). PowerShell truncates lines visually beyond the window width, and Ctrl+C copies what is displayed, not what is in memory. To verify long-line file contents accurately, save the file to a temp location and open in Notepad or another wrap-aware editor.
+
+---
+
 ## Commit Message Conventions
 
 This repo uses [Conventional Commits](https://www.conventionalcommits.org/):
