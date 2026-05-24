@@ -22,7 +22,7 @@ Full sub-objective breakdown: [`objectives/core2-blueprint.md`](objectives/core2
 | # | Lab | Domain(s) | Status |
 |---|-----|-----------|--------|
 | 01 | [DNS Bad Server](labs/lab-01-dns-bad-server/) | 1.7, 3.1 | ✅ Built |
-| 02 | [Print Spooler Stopped](labs/lab-02-print-spooler-stopped/) | 1, 3 | 🚧 Scaffolded |
+| 02 | [Print Spooler Stopped](labs/lab-02-print-spooler-stopped/) | 1.4, 3.1 | ✅ Built |
 | 03 | [Account Disabled](labs/lab-03-account-disabled/) | 2, 3 | 🚧 Scaffolded |
 | 04 | [Wrong Default Gateway](labs/lab-04-wrong-default-gateway/) | 1, 3 | 🚧 Scaffolded |
 | 05 | [Suspicious Scheduled Task](labs/lab-05-suspicious-scheduled-task/) | 2, 3 | 🚧 Scaffolded |
